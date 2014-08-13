@@ -9,8 +9,12 @@ $ ->
     $(slide_img).removeAttr "style"
 
 
-
-  firstSlideContentSwap('#first_slide_set_1', '#first_slide_set_1 img')
+  $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop()
+  $('.first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+    $('.second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+      $('.third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
+    )    
+  )
   $('.ipad_image_set_1 .slide_two_image_styles').fadeIn()
 
   $(".carousel").carousel interval: false
@@ -56,18 +60,34 @@ $ ->
     value = $(@).data('value')
 
     if value == 0
-      firstSlideContentSwap('#first_slide_set_1', '#first_slide_set_1 img')
+      $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop()
+      $('.first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+        $('.second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+          $('.third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
+        )    
+      )
     else  
       removeAttributes('#first_slide_set_1', '#first_slide_set_1 img')
+
     if value == 1
-      firstSlideContentSwap('#first_slide_set_2', '#first_slide_set_2 img')
+      $('#first_slide_set_2').fadeIn(1000).siblings().hide().stop()
+      $('.second_set_first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+        $('.second_set_second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+          $('.second_set_third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
+        )    
+      )
     else
       removeAttributes('#first_slide_set_2', '#first_slide_set_2 img')
+
     if value == 2
-      firstSlideContentSwap('#first_slide_set_3', '#first_slide_set_3 img')
+      $('#first_slide_set_3').fadeIn(1000).siblings().hide().stop()
+      $('.third_set_first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+        $('.third_set_second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+          $('.third_set_third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
+        )    
+      )
     else
       removeAttributes('#first_slide_set_3', '#first_slide_set_3 img')
-
 
   $('.second_slide_menu li').on 'click', ->
     $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active')
