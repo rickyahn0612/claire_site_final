@@ -2,108 +2,108 @@
   #benefits_top_header
     %h3 CLARI BENEFITS
   #benefits_main_nav_container
-    #carousel_main_nav
-      .container{style: 'width: 980px;'}
-        / Indicators
-        %ol.carousel-indicators
-          %li#first-main-tab.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-            .menu_bar.active_menu_bar
-              .person_icon
-                = image_tag 'sales_rep_icon.png'
-              CLARI FOR SALES REPS
-          %li#second-main-tab{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-            .menu_bar
-              .person_icon
-                = image_tag 'sales_manager_icon.png'
-              CLARI FOR SALES MANAGERS
-          %li#third-main-tab{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-            .menu_bar
-              .person_icon
-                = image_tag 'sales_op_icon.png'
-              CLARI FOR SALES OPS
+    .container
+      / Indicators
+      %ol.carousel-indicators
+        %li#first-main-tab.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+          .menu_bar.active_menu_bar
+            .person_icon
+              = image_tag 'sales_rep_icon.png'
+            CLARI FOR SALES REPS
+        %li#second-main-tab{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+          .menu_bar
+            .person_icon
+              = image_tag 'sales_manager_icon.png'
+            CLARI FOR SALES MANAGERS
+        %li#third-main-tab{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+          .menu_bar
+            .person_icon
+              = image_tag 'sales_op_icon.png'
+            CLARI FOR SALES OPS
   #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
     .carousel-inner
       #slide1.item.active
         .container
           .slider-header
             %p Clari delivers all the information sales reps need about their customers right to their fingertips on their mobile device saving them time, shortening sales cycles, and increasing win rates.  And Clari captures deal progress as they sell often automatically instead of forcing them to spend hours at their computer away from selling.
-            .first_slide_menu
-              %ul
-                %li.first_slide_menu_active{"data-value" => "0"}
-                  Your Personal Deal Assistant
-                %li{"data-value" => "1"} Your CRM Update Acclerator
-                %li{"data-value" => "2"} Your Strategic Pipeline Manager
+          .first_slide_menu
+            %ul
+              %li.slide_menu_active{"data-value" => "0"}
+                Your Personal Deal Assistant
+              %li{"data-value" => "1"} Your CRM Update Acclerator
+              %li{"data-value" => "2"} Your Strategic Pipeline Manager
         #first_slide_background 
-          .slider_content_background
-            #first_slide_set_1.first_slide_active_class
-              %ul
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 1
-                    .phone_content_container.float-right
-                      %p Quickly understand what's planned for today and where to focus your time
-                    = image_tag 'bg-device-reps-1-1.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 2
-                    .phone_content_container.float-right
-                      %p Get deal reminders and prep cards with an at-a-glance view of where business lies.
-                    = image_tag 'bg-device-reps-1-2.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 3
-                    .phone_content_container.float-right
-                      %p Stay engaged with your professional relationships and how they relate to your deals
-                    = image_tag 'bg-device-reps-1-3.png'
-            #first_slide_set_2{style: 'display: none;'}
-              %ul
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 1
-                    .phone_content_container.float-right
-                      %p Intelligent post-meeting debriefs prompt you to update your opportunity
-                    = image_tag 'bg-device-reps-2-1.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 2
-                    .phone_content_container.float-right
-                      %p Quickly update your deal status on the go with a few simple taps
-                    = image_tag 'bg-device-reps-2-2.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 3
-                    .phone_content_container.float-right
-                      %p Move your deal through the sales process without logging in to complex CRM systems
-                    = image_tag 'bg-device-reps-2-3.png'
-            #first_slide_set_3{style: 'display: none;'}
-              %ul
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 1
-                    .phone_content_container.float-right
-                      %p Filter and view by different deal stages and levels
-                    = image_tag 'bg-device-reps-3-1.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 2
-                    .phone_content_container.float-right
-                      %p Flexible view of pipeline and forecast allow you to focus on the right deals and the right time
-                    = image_tag 'bg-device-reps-3-2.png'
-                %li
-                  .slide-1-1-container.float-left
-                    .phone_number_container.float-left
-                      %span.number 3
-                    .phone_content_container.float-right
-                      %p Create, assign, and manage tasks associated with your deals
-                    = image_tag 'bg-device-reps-3-3.png'
+          .container
+            .slider_content_background
+              #first_slide_set_1.first_slide_active_class
+                %ul
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 1
+                      .phone_content_container.float-right
+                        %p Quickly understand what's planned for today and where to focus your time
+                      = image_tag 'bg-device-reps-1-1.png', class: 'first_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 2
+                      .phone_content_container.float-right
+                        %p Get deal reminders and prep cards with an at-a-glance view of where business lies.
+                      = image_tag 'bg-device-reps-1-2.png', class: 'second_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 3
+                      .phone_content_container.float-right
+                        %p Stay engaged with your professional relationships and how they relate to your deals
+                      = image_tag 'bg-device-reps-1-3.png', class: 'third_phone phone_styles'
+              #first_slide_set_2.first_slide_active_class{style: 'display: none;'}
+                %ul
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 1
+                      .phone_content_container.float-right
+                        %p Intelligent post-meeting debriefs prompt you to update your opportunity
+                      = image_tag 'bg-device-reps-2-1.png', class: 'first_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 2
+                      .phone_content_container.float-right
+                        %p Quickly update your deal status on the go with a few simple taps
+                      = image_tag 'bg-device-reps-2-2.png', class: 'first_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 3
+                      .phone_content_container.float-right
+                        %p Move your deal through the sales process without logging in to complex CRM systems
+                      = image_tag 'bg-device-reps-2-3.png', class: 'first_phone phone_styles'
+              #first_slide_set_3.first_slide_active_class{style: 'display: none;'}
+                %ul
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 1
+                      .phone_content_container.float-right
+                        %p Filter and view by different deal stages and levels
+                      = image_tag 'bg-device-reps-3-1.png', class: 'first_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 2
+                      .phone_content_container.float-right
+                        %p Flexible view of pipeline and forecast allow you to focus on the right deals and the right time
+                      = image_tag 'bg-device-reps-3-2.png', class: 'first_phone phone_styles'
+                  %li
+                    .slide-1-1-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 3
+                      .phone_content_container.float-right
+                        %p Create, assign, and manage tasks associated with your deals
+                      = image_tag 'bg-device-reps-3-3.png', class: 'first_phone phone_styles'
 
       /// SECOND SLIDE ///
 
@@ -111,16 +111,20 @@
         .container
           .slider-header
             %p Clari delivers new levels of visibility into how deals are progressing out in the field allowing sales managers to drive more business and increase the accuracy of their forecast.
-            .first_slide_menu
-              %ul
-                %li.first_slide_menu_active{"data-value" => "0"}
-                  Your Personal Deal Assistant
-                %li{"data-value" => "1"} Your CRM Update Acclerator
-                %li{"data-value" => "2"} Your Strategic Pipeline Manager
+          .second_slide_menu
+            %ul
+              %li.slide_menu_active{"data-value" => "0"}
+                Configurable dashboard oriented around key team objectives
+              %li{"data-value" => "1"} 
+                Full visibility into deal activity across your team
+              %li{"data-value" => "2"} 
+                Analytic-driven insights into deal progress and risks
+              %li{"data-value" => "3"} 
+                Instant access to deal status and milestones
         #second_slide_background
-          .slider_content_background
-            #first_slide_2 
-              #second_slide_set_1
+          .container
+            .slider_content_background
+              #second_slide
                 .ipad_item_container
                   .ipad_image_set_1.slide_two_item_styles
                     = image_tag 'bg-device-managers-1-1.png'
@@ -133,10 +137,37 @@
 
                 .clear
 
+      /// THIRD SLIDE ///
 
-
-
-
+      #slide3.item
+        .container
+          .slider-header
+            %p Clari applies data science across various measurable information stores that sales teams use every day (e.g. CRM, mail, calendar, support) — surfacing predictive insights for reps, managers and execs that enables a new level of sales management, execution & forecasting.
+        #third_slide_background
+          .container
+            .slider_content_background
+              #third_slide_set
+                %ul
+                  %li
+                    .slide-3-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 1
+                      .phone_content_container.float-right
+                        %p Intelligent post-meeting debriefs prompt you to update your opportunity
+                  %li
+                    .slide-3-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 2
+                      .phone_content_container.float-right
+                        %p Quickly update your deal status on the go with a few simple taps
+                  %li
+                    .slide-3-container.float-left
+                      .phone_number_container.float-left
+                        %span.number 3
+                      .phone_content_container.float-right
+                        %p Move your deal through the sales process without logging in to complex CRM systems
+                .ipad_item_container
+                  = image_tag 'bg-device-ops-1-1.png'
 
 
 
