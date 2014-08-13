@@ -231,12 +231,12 @@ body {
       margin: 0 !important; }
       /* line 268, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
       #benefits_main_container .second_slide_menu ul li {
-        padding: 7px 5px 7px 5px;
+        padding: 12px 5px 7px 10px;
         display: inline-block;
         cursor: pointer;
         width: 205px;
         height: 70px;
-        margin-right: 34px;
+        margin-right: 27px;
         text-align: left;
         vertical-align: text-top;
         font-weight: bold;
@@ -246,7 +246,7 @@ body {
           margin-right: 0 !important; }
     /* line 286, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
     #benefits_main_container .second_slide_menu .slide_menu_active {
-      padding: 7px 5px 7px 5px;
+      padding: 12px 5px 7px 10px;
       color: black;
       width: 205px;
       height: 70px;
