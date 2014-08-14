@@ -8,13 +8,6 @@ $ ->
     $(slide_set).removeAttr "style"
     $(slide_img).removeAttr "style"
 
-
-  $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop()
-  $('.first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
-    $('.second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
-      $('.third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
-    )    
-  )
   $('.ipad_image_set_1 .slide_two_image_styles').fadeIn()
 
   $(".carousel").carousel interval: false
@@ -55,6 +48,14 @@ $ ->
     $(this).addClass('active').siblings().removeClass('active')
     $('.carousel-inner').animate({'height': '780px', 'opacity': '1'}, 1200)
 
+  $('.carousel-indicators li:first').on 'click', ->
+    $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop()
+    $('.first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+      $('.second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
+        $('.third_phone').animate({'opacity': 1, 'margin-top': 15}, 1000)       
+      )    
+    )
+
   $('.first_slide_menu li').on 'click', ->
     $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active')
     $(this).closest('#benefits_container').find('.phone_item_container').addClass('active_phone_item_container').siblings().removeClass('active_phone_item_container')
@@ -69,7 +70,7 @@ $ ->
         )    
       )
     else  
-      removeAttributes('#first_slide_set_1', '#first_slide_set_1 img')
+      removeAttributes('#first_slide_set_1', '#first_slide_set_1 img').stop()
 
     if value == 1
       $('#first_slide_set_2').fadeIn(1000).siblings().hide().stop()
@@ -79,7 +80,7 @@ $ ->
         )    
       )
     else
-      removeAttributes('#first_slide_set_2', '#first_slide_set_2 img')
+      removeAttributes('#first_slide_set_2', '#first_slide_set_2 img').stop()
 
     if value == 2
       $('#first_slide_set_3').fadeIn(1000).siblings().hide().stop()
@@ -89,7 +90,7 @@ $ ->
         )    
       )
     else
-      removeAttributes('#first_slide_set_3', '#first_slide_set_3 img')
+      removeAttributes('#first_slide_set_3', '#first_slide_set_3 img').stop()
 
   $('.second_slide_menu li').on 'click', ->
     $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active')
