@@ -60,14 +60,19 @@
       }
     });
     $('.carousel-indicators li').on('click', function() {
-      return $(this).addClass('active').siblings().removeClass('active');
+      $(this).addClass('active').siblings().removeClass('active');
+      return $('.carousel-inner').animate({
+        'height': '780px',
+        'opacity': '1'
+      }, 1200);
     });
     $('.first_slide_menu li').on('click', function() {
-      var value;
+      var state, value;
       $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active');
       $(this).closest('#benefits_container').find('.phone_item_container').addClass('active_phone_item_container').siblings().removeClass('active_phone_item_container');
       value = $(this).data('value');
       if (value === 0) {
+        state = true;
         $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop();
         $('.first_phone').animate({
           'opacity': 1,

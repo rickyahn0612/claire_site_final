@@ -300,17 +300,18 @@ body {
 /* line 375, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel {
   position: relative;
-  top: -12px;
+  top: 0px;
   background: #687A7E; }
 
 /* line 380, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner {
   position: relative;
   width: 100%;
-  height: 780px;
+  height: 0;
+  opacity: 0;
   overflow: hidden; }
 
-/* line 386, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 387, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .item {
   position: relative;
   display: none;
@@ -318,77 +319,93 @@ body {
   -o-transition: .6s ease-in-out left;
   transition: .6s ease-in-out left; }
 
-/* line 394, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 395, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1; }
 
-/* line 399, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 400, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .active,
 .carousel-inner > .next,
 .carousel-inner > .prev {
   display: block; }
 
-/* line 402, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 403, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .active {
   left: 0; }
 
-/* line 406, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 407, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .next,
 .carousel-inner > .prev {
   position: absolute;
   top: 0;
   width: 100%; }
 
-/* line 411, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 412, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .next {
   left: 100%; }
 
-/* line 414, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 415, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .prev {
   left: -100%; }
 
-/* line 418, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 419, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .next.left,
 .carousel-inner > .prev.right {
   left: 0; }
 
-/* line 421, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 422, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .active.left {
   left: -100%; }
 
-/* line 424, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 425, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-inner > .active.right {
   left: 100%; }
 
-/* line 433, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 434, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-indicators {
   padding: 0 !important;
   margin: 0 !important;
   text-align: center; }
-  /* line 438, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+  /* line 439, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
   .carousel-indicators li {
     width: 270px;
-    height: 120px !important;
+    height: 110px !important;
     padding-top: 20px;
     margin-right: 78px !important;
+    position: relative;
+    top: 0px;
     background: #ffffff;
     font-weight: 100;
     font-size: 17px; }
-    /* line 447, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+    /* line 450, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+    .carousel-indicators li:hover {
+      background: #6D818A;
+      width: 270px !important;
+      height: 120px;
+      color: white;
+      -webkit-transition: all 0.80s ease;
+      -moz-transition: all 0.80s ease;
+      -o-transition: all 0.80s ease;
+      transition: all 0.80s ease; }
+    /* line 461, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
     .carousel-indicators li:nth-child(3) {
       margin-right: 0 !important; }
-  /* line 452, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+    /* line 465, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+    .carousel-indicators li img {
+      width: 76px;
+      height: 68px; }
+  /* line 471, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
   .carousel-indicators li.active {
     background: #6D818A;
     width: 270px !important;
-    height: 140px;
+    height: 120px;
     color: white; }
-  /* line 459, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+  /* line 478, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
   .carousel-indicators .person_icon {
     margin-bottom: 5px; }
 
-/* line 463, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
+/* line 482, /Users/Ricky/Sites/claire_site_final/source/stylesheets/all.scss */
 .carousel-indicators li {
   display: inline-block;
   cursor: pointer; }
