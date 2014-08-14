@@ -374,13 +374,14 @@ body {
 
 .carousel {
   position: relative;
-  top: -12px;
+  top: 0px;
   background: #687A7E;
 }
 .carousel-inner {
   position: relative;
   width: 100%;
-  height: 780px;
+  height: 0;
+  opacity: 0;
   overflow: hidden;
 }
 .carousel-inner > .item {
@@ -437,22 +438,40 @@ body {
 
   li {
     width: 270px;
-    height: 120px !important;
+    height: 110px !important;
     padding-top: 20px;
     margin-right: 78px !important;
+    position: relative;
+    top: 0px;
     background: #ffffff;
     font-weight: 100;
     font-size: 17px;
 
+    &:hover {
+      background: #6D818A;
+      width: 270px !important;
+      height: 120px;
+      color: white;
+      -webkit-transition: all 0.80s ease;
+      -moz-transition: all 0.80s ease;
+      -o-transition: all 0.80s ease;
+      transition: all 0.80s ease;
+    }
+
     &:nth-child(3) {
       margin-right: 0 !important;
+    }
+
+    img {
+      width: 76px;
+      height: 68px;
     }
   }
 
   li.active {
     background: #6D818A;
     width: 270px !important;
-    height: 140px;
+    height: 120px;
     color: white;
   }
 

@@ -53,6 +53,7 @@ $ ->
 
   $('.carousel-indicators li').on 'click', ->
     $(this).addClass('active').siblings().removeClass('active')
+    $('.carousel-inner').animate({'height': '780px', 'opacity': '1'}, 1200)
 
   $('.first_slide_menu li').on 'click', ->
     $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active')
@@ -60,6 +61,7 @@ $ ->
     value = $(@).data('value')
 
     if value == 0
+      state = true
       $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop()
       $('.first_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
         $('.second_phone').animate({'opacity': 1, 'margin-top': 15}, 1000, ->
