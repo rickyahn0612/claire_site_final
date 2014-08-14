@@ -12,21 +12,6 @@
       $(slide_set).removeAttr("style");
       return $(slide_img).removeAttr("style");
     };
-    $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop();
-    $('.first_phone').animate({
-      'opacity': 1,
-      'margin-top': 15
-    }, 1000, function() {
-      return $('.second_phone').animate({
-        'opacity': 1,
-        'margin-top': 15
-      }, 1000, function() {
-        return $('.third_phone').animate({
-          'opacity': 1,
-          'margin-top': 15
-        }, 1000);
-      });
-    });
     $('.ipad_image_set_1 .slide_two_image_styles').fadeIn();
     $(".carousel").carousel({
       interval: false
@@ -66,6 +51,23 @@
         'opacity': '1'
       }, 1200);
     });
+    $('.carousel-indicators li:first').on('click', function() {
+      $('#first_slide_set_1').fadeIn(1000).siblings().hide().stop();
+      return $('.first_phone').animate({
+        'opacity': 1,
+        'margin-top': 15
+      }, 1000, function() {
+        return $('.second_phone').animate({
+          'opacity': 1,
+          'margin-top': 15
+        }, 1000, function() {
+          return $('.third_phone').animate({
+            'opacity': 1,
+            'margin-top': 15
+          }, 1000);
+        });
+      });
+    });
     $('.first_slide_menu li').on('click', function() {
       var state, value;
       $(this).addClass('slide_menu_active').siblings().removeClass('slide_menu_active');
@@ -89,7 +91,7 @@
           });
         });
       } else {
-        removeAttributes('#first_slide_set_1', '#first_slide_set_1 img');
+        removeAttributes('#first_slide_set_1', '#first_slide_set_1 img').stop();
       }
       if (value === 1) {
         $('#first_slide_set_2').fadeIn(1000).siblings().hide().stop();
@@ -108,7 +110,7 @@
           });
         });
       } else {
-        removeAttributes('#first_slide_set_2', '#first_slide_set_2 img');
+        removeAttributes('#first_slide_set_2', '#first_slide_set_2 img').stop();
       }
       if (value === 2) {
         $('#first_slide_set_3').fadeIn(1000).siblings().hide().stop();
@@ -127,7 +129,7 @@
           });
         });
       } else {
-        return removeAttributes('#first_slide_set_3', '#first_slide_set_3 img');
+        return removeAttributes('#first_slide_set_3', '#first_slide_set_3 img').stop();
       }
     });
     return $('.second_slide_menu li').on('click', function() {
